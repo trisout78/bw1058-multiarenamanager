@@ -41,7 +41,7 @@ public class Main extends JavaPlugin implements Listener {
 
         Bukkit.getScheduler().runTaskLater(this, () -> {
             if (world.getName().equals("world")) {
-                player.kickPlayer("L'arène dans laquelle vous étiez redémarre");
+                player.kickPlayer("Retour au lobby");
             }
         }, 1L);
     }
