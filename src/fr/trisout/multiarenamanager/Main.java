@@ -39,13 +39,12 @@ public class Main extends JavaPlugin implements Listener {
     public void onPlayerChangeWorld(PlayerChangedWorldEvent event) {
         Player player = event.getPlayer();
         World world = player.getWorld();
-
-        Bukkit.getScheduler().runTaskLater(this, () -> {
-            if (player.getGameMode() != GameMode.CREATIVE)
-             if (world.getName().equals("world")) {
-                 player.kickPlayer("Retour au lobby");
-            }
-        }, 1L);
+        if (player.getGameMode() != GameMode.CREATIVE)
+            Bukkit.getScheduler().runTaskLater(this, () -> {
+                if (world.getName().equals("world")) {
+                    player.kickPlayer("Retour au lobby");
+             }
+            }, 1L);
     }
 }
 
