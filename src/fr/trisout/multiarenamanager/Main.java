@@ -36,18 +36,6 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     @EventHandler
-    public void onPlayerGamemodeChange(PlayerChangedWorldEvent event) {
-        Player player = event.getPlayer();
-
-        Bukkit.getScheduler().runTaskLater(this, () -> {
-            if (player.getGameMode() == GameMode.CREATIVE)
-                player.performCommand("bw leave");
-                player.sendMessage("§a§lMODERATION MODE");
-                player.performCommand("bw gui");
-        }, 1L);
-    }
-
-    @EventHandler
     public void onPlayerChangeWorld(PlayerChangedWorldEvent event) {
         Player player = event.getPlayer();
         World world = player.getWorld();
