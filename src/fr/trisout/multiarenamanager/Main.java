@@ -1,7 +1,6 @@
 package fr.trisout.multiarenamanager;
 
 import org.bukkit.Bukkit;
-import org.bukkit.GameMode;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -39,11 +38,10 @@ public class Main extends JavaPlugin implements Listener {
     public void onPlayerChangeWorld(PlayerChangedWorldEvent event) {
         Player player = event.getPlayer();
         World world = player.getWorld();
-        if (player.getGameMode() != GameMode.CREATIVE)
-            Bukkit.getScheduler().runTaskLater(this, () -> {
-                if (world.getName().equals("world")) {
-                    player.kickPlayer("Retour au lobby");
-             }
+        Bukkit.getScheduler().runTaskLater(this, () -> {
+            if (world.getName().equals("world")) {
+                player.kickPlayer("Retour au lobby");
+            }
             }, 1L);
     }
 }
