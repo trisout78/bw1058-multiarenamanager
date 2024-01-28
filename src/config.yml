@@ -1,0 +1,4 @@
+onJoinCommand: "bw join 1v1"
+errorMessage: "Une erreur s'est produite, veuillez réessayer"
+kickWorld: "world"
+changeWorldMessage: "Retour au lobby"
