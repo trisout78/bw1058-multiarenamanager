@@ -122,8 +122,8 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    <groupId>SemiRP</groupId>
-    <artifactId>SemiRP</artifactId>
+    <groupId>BW1058-MultiArenaManager</groupId>
+    <artifactId>BW1058-MultiArenaManager</artifactId>
     <version>1.0.1</version>
 
 </project>
